@@ -22,7 +22,7 @@ class Home extends StatefulWidget{
         Widget build(BuildContext context) {
           return Scaffold(
             appBar : AppBar( 
-              title: Text('Semantics App'),
+              title: Text('Cups App'),
             ),
             body: callPage(_currentIndex), 
             
