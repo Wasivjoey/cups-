@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 
 
@@ -13,63 +14,96 @@ class Home extends StatefulWidget{
   }
   
   class _HomeState extends State<Home> {
-    int _currentIndex =0;
-    Widget callPage(int _currentIndex){
-      
-    }     
-
-    void ButtonClick()
-    {
-      print("yes");
-    }   
+    final PageController _pageController = PageController(initialPage: 0);
+    final int numPages =3 ;
+    int _currentPage = 0;
         @override 
         Widget build(BuildContext context) {
-          return Scaffold( appBar: AppBar(
-            //title: Text(Widget.title),
-          ),
-          body: Center(
-            child: RaisedButton(
-              onPressed: ButtonClick,
-              child: Text("Guest"),
-              color: Colors.amber,
-              textColor: Colors.white,
-
-              ),),
-
-          );
-        }
-  }*/
- 
-import 'package:flutter/material.dart';
-
-class LoginPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromRGBO(3, 9, 23, 1),
-      body: Container(
-        padding: EdgeInsets.all(30),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-                
-                 
-            SizedBox(height: 40,),
-           Center(
-              child: Container(
-                width: 120,
-                padding: EdgeInsets.all(15),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: Colors.blue[800]
-                ),
-                child: Center(child: Text("Login", style: TextStyle(color: Colors.white.withOpacity(.7)),)),
-              ),
-            ),
+          return Scaffold( 
+    body: AnnotatedRegion(
+      value:SystemUiOverlayStyle.light,
+    child: Container(
+      decoration:BoxDecoration(
+        gradient:LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          stops: [0.1,0.4,0.7,0.9],
+          colors: [
+            Color(0xFFFFE082),
+            Color(0xFFFFCA28),
+            Color(0xFFFFB300),
+            Color(0xFFFF8F00),
           ],
+
         ),
-      ),
-    );
-  }
+         ),
+         child: Padding(
+           padding: EdgeInsets.symmetric(vertical: 40),
+           child: Column(
+             crossAxisAlignment: CrossAxisAlignment.stretch,
+             children: <Widget>[
+               Container(
+                 alignment: Alignment.centerRight,
+                 child: FlatButton(
+                   onPressed: ()=> print("Guest entry invalid "),
+                   child: Text(
+                     'Guest',
+                     style: TextStyle(
+                       color: Colors.white,
+                       fontSize: 20.0,
+                     ),
+                   ),),
+               ),
+               Container(
+                 alignment: Alignment.centerLeft,
+                 child: FlatButton(
+                   onPressed: ()=> print("Admin access ONLY "),
+                   child: Text(
+                     'Admin',
+                     style: TextStyle(
+                       color: Colors.white,
+                       fontSize: 20.0,
+                     ),
+                   ),),
+               ),
+              Container(
+                height: 600.0,
+                child: PageView(
+                  physics: ClampingScrollPhysics(),
+                  controller: _pageController,
+                  onPageChanged: (int page){
+                    setState(() {
+                      _currentPage = page;
+                    });
+                  },
+                  
+                children: <Widget>[
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Center(
+                        child:Image(
+                          image: AssetImage(
+                            'images/cafe.png',
+                          ),
+                           height: 300.0,
+                          width: 300.0,
+                          ),
+                         
+                         )
+                    ]
+                  )
+
+                ] 
+                )
+              )
+             ],
+
+           ),
+         ),
+    )
+  ),
+          );
 }
+  }
+  
