@@ -54,18 +54,7 @@ class Home extends StatefulWidget{
                      ),
                    ),),
                ),
-               Container(
-                 alignment: Alignment.centerLeft,
-                 child: FlatButton(
-                   onPressed: ()=> print("Admin access ONLY "),
-                   child: Text(
-                     'Admin',
-                     style: TextStyle(
-                       color: Colors.white,
-                       fontSize: 20.0,
-                     ),
-                   ),),
-               ),
+               
               Container(
                 height: 600.0,
                 child: PageView(
@@ -78,13 +67,13 @@ class Home extends StatefulWidget{
                   },
                   
                 children: <Widget>[
-                  Column(
+                  /*Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Center(
                         child:Image(
                           image: AssetImage(
-                            'images/cafe.png',
+                            'assets/images/cafe.png',
                           ),
                            height: 300.0,
                           width: 300.0,
@@ -92,11 +81,24 @@ class Home extends StatefulWidget{
                          
                          )
                     ]
-                  )
+                    
+                 ),*/ 
+                  Container(
+                 alignment: Alignment.centerLeft,
+                 child: FlatButton(
+                   onPressed: ()=> print("Admin access ONLY "),
+                   child: Text(
+                     'Admin',
+                     style: TextStyle(
+                       color: Colors.white,
+                       fontSize: 20.0,
+                     ),
+                   ),),
+               ),
 
                 ] 
                 )
-              )
+              ),
              ],
 
            ),
