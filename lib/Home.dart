@@ -42,18 +42,6 @@ class Home extends StatefulWidget{
            child: Column(
              crossAxisAlignment: CrossAxisAlignment.stretch,
              children: <Widget>[
-               Container(
-                 alignment: Alignment.centerRight,
-                 child: RaisedButton(
-                   onPressed: ()=> print("Guest entry invalid "),
-                   child: Text(
-                     'Guest',
-                     style: TextStyle(
-                       color: Colors.white,
-                       fontSize: 20.0,
-                     ),
-                   ),),
-               ),
                
               Container(
                 height: 600.0,
@@ -67,7 +55,7 @@ class Home extends StatefulWidget{
                   },
                   
                 children: <Widget>[
-                  /*Column(
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Center(
@@ -82,12 +70,37 @@ class Home extends StatefulWidget{
                          )
                     ]
                     
-                 ),*/ 
+                 ),
                   
               
                 ] 
                 )
               ),
+               Container(
+                 alignment: Alignment.center,
+                 child: RaisedButton(
+                   onPressed: ()=> print("Guest entry invalid "),
+                   child: Text(
+                     'Guest',
+                     style: TextStyle(
+                       color: Colors.white,
+                       fontSize: 20.0,
+                     ),
+                   ),),
+               ),
+
+                Container(
+                 alignment: Alignment.center,
+                 child: RaisedButton(
+                   onPressed: ()=> print("Guest entry invalid "),
+                   child: Text(
+                     'Admin',
+                     style: TextStyle(
+                       color: Colors.white,
+                       fontSize: 20.0,
+                     ),
+                   ),),
+               ),
              ],
 
            ),
