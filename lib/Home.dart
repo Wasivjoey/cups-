@@ -44,7 +44,7 @@ class Home extends StatefulWidget{
              children: <Widget>[
                Container(
                  alignment: Alignment.centerRight,
-                 child: FlatButton(
+                 child: RaisedButton(
                    onPressed: ()=> print("Guest entry invalid "),
                    child: Text(
                      'Guest',
@@ -83,19 +83,8 @@ class Home extends StatefulWidget{
                     ]
                     
                  ),*/ 
-                  Container(
-                 alignment: Alignment.centerLeft,
-                 child: FlatButton(
-                   onPressed: ()=> print("Admin access ONLY "),
-                   child: Text(
-                     'Admin',
-                     style: TextStyle(
-                       color: Colors.white,
-                       fontSize: 20.0,
-                     ),
-                   ),),
-               ),
-
+                  
+              
                 ] 
                 )
               ),
