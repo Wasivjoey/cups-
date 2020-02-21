@@ -3,6 +3,7 @@ import 'utils/Sqlite/db_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:cups/menu_widget/menu_widget.dart';
 
 
 
@@ -16,6 +17,7 @@ class Home extends StatefulWidget{
   class _HomeState extends State<Home> {
     final PageController _pageController = PageController(initialPage: 0);
     final int numPages =3 ;
+     int _currentPage =0;
     
         @override 
         Widget build(BuildContext context) {
@@ -79,7 +81,7 @@ class Home extends StatefulWidget{
                Container(
                  alignment: Alignment.center,
                  child: RaisedButton(
-                   onPressed: ()=> print("Guest entry invalid "),
+                   onPressed: ()=> MenuWidget(),
                    child: Text(
                      'Guest',
                      style: TextStyle(
@@ -92,7 +94,7 @@ class Home extends StatefulWidget{
                 Container(
                  alignment: Alignment.center,
                  child: RaisedButton(
-                   onPressed: ()=> DBTestPage,
+                   onPressed: ()=> DBTestPage(),
                    child: Text(
                      'Admin',
                      style: TextStyle(

@@ -1,13 +1,5 @@
-/*
-*  beverage_widget.dart
-*  Menu
-*
-*  Created by [Author].
-*  Copyright © 2018 [Company]. All rights reserved.
-    */
-
 import 'package:flutter/material.dart';
-import 'package:menu/values/values.dart';
+import 'values/values.dart';
 
 
 class BeverageWidget extends StatelessWidget {

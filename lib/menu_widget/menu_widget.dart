@@ -7,8 +7,7 @@
     */
 
 import 'package:flutter/material.dart';
-import 'package:assets/values/values.dart';
-import 
+import 'values/values.dart';
 
 
 class MenuWidget extends StatelessWidget {
@@ -136,7 +135,6 @@ class MenuWidget extends StatelessWidget {
             ),
             Spacer(),
             Container(
-              child: RaisedButton(onPressed: () => Home;
               width: 144,
               height: 48,
               margin: EdgeInsets.only(left: 23, bottom: 29),
