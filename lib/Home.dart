@@ -1,5 +1,5 @@
 import 'dart:io';
-
+import 'utils/Sqlite/db_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -92,7 +92,7 @@ class Home extends StatefulWidget{
                 Container(
                  alignment: Alignment.center,
                  child: RaisedButton(
-                   onPressed: ()=> print("Guest entry invalid "),
+                   onPressed: ()=> DBTestPage,
                    child: Text(
                      'Admin',
                      style: TextStyle(

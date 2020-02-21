@@ -55,4 +55,17 @@ Future<List<item>> getItems() async{
  }
 return items;
 }
+Future<int> delete(int id) async {
+  var dbClient = await db;
+  return await dbClient.delete(TABLE , where: '$ID = ?', whereArgs: [id]);
+}
+Future<int> update(item item) async{
+  var dbClient = await db;
+  return await dbClient.update(TABLE, item.toMap(), 
+  where: '$ID = ?', whereArgs:[item.id] );
+}
+Future close() async{
+  var dbClient= await db;
+  dbClient.close();
+}
 }
