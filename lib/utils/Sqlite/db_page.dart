@@ -8,7 +8,7 @@ import 'dart:async';
 class DBTestPage extends StatefulWidget {
   final String title;
 
-  DBTestPage({Key key, this.title}) : super(key: key);
+  DBTestPage({Key key, this.title}) :  super(key:key);
 
   @override
   State<StatefulWidget> createState() {

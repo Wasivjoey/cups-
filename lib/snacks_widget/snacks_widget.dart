@@ -7,7 +7,7 @@
     */
 
 import 'package:flutter/material.dart';
-import 'package:menu/values/values.dart';
+import './../values/values.dart';
 
 
 class SnacksWidget extends StatelessWidget {
