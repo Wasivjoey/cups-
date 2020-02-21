@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io'as io;
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
+import 'package:path_provider/path_provider.dart';
 import "item.dart";
 
 class DBHelper{
@@ -12,18 +13,19 @@ class DBHelper{
   static const TABLE = 'Items';
   static const DB_NAME = 'Inventory.db';
 
-  Future<Database> get db async{
-    if (_db != null){
-      return _db;
-    }
+   Future<Database> get db async {
+    if (_db != null) return _db;
+    _db = await initDb();
+    return _db;
   }
-initDB() async{
+initDb() async{
   io.Directory documentsDirectory = await getApplicationDocumentsDirectory();
-  String path = join (documentsDirectory.path,DB_NAME);
+  String path = join(documentsDirectory.path,DB_NAME);
   var db = await openDatabase(path, version: 1, onCreate: _onCreate);
   return db;
 
 }
+
 
 _onCreate(Database db,int version) async{
   await db

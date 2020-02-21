@@ -1,4 +1,4 @@
-import 'dart:io';
+
 import 'utils/Sqlite/db_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +16,7 @@ class Home extends StatefulWidget{
   class _HomeState extends State<Home> {
     final PageController _pageController = PageController(initialPage: 0);
     final int numPages =3 ;
-    int _currentPage = 0;
+    
         @override 
         Widget build(BuildContext context) {
           return Scaffold( 
