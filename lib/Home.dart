@@ -95,7 +95,7 @@ class Home extends StatefulWidget{
                 Container(
                  alignment: Alignment.center,
                  child: RaisedButton(
-                   onPressed: ()=> DBTestPage(),
+                   onPressed: ()=> MyNavigator.goToDB(context) ,
                    child: Text(
                      'Admin',
                      style: TextStyle(

@@ -1,3 +1,5 @@
+import 'package:cups/menu_widget/menu_widget.dart';
+import 'package:cups/utils/Sqlite/db_page.dart';
 import 'package:flutter/material.dart';
 import 'package:cups/Home.dart';
 import 'package:cups/splash_pg.dart';
@@ -5,6 +7,9 @@ import 'package:cups/splash_pg.dart';
 
 var routes = <String , WidgetBuilder>{
   "/home":(BuildContext context)=> Home(),
+  "/menu":(BuildContext context)=> MenuWidget(),
+  "/manager":(BuildContext context) => DBTestPage()
+  ,
   };
 
 void main() =>  
@@ -14,7 +19,8 @@ void main() =>
       ThemeData(primaryColor: Colors.amber, accentColor: Colors.redAccent),
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
-      routes: routes));
+      routes: routes)
+      );
       
       
  

@@ -6,7 +6,12 @@ class MyNavigator{
    
   }
    static void goToMenu(BuildContext context) {
-    Navigator.pushNamed(context, "/menu_widget");
+    Navigator.pushNamed(context, "/menu");
+   
+  }
+
+  static void goToDB(BuildContext context) {
+    Navigator.pushNamed(context, "/manager");
    
   }
 }
