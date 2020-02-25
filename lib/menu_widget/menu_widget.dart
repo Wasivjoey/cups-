@@ -25,7 +25,9 @@ class MenuWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
+              
               margin: EdgeInsets.only(left: 37, top: 58),
+               
               child: Text(
                 "Menu",
                 textAlign: TextAlign.left,
@@ -36,8 +38,9 @@ class MenuWidget extends StatelessWidget {
                   fontSize: 60,
                 ),
               ),
-            ),
+            
             Align(
+               child: FlatButton(onPressed: ()=>MyNavigator.goToHome(context),
               alignment: Alignment.topCenter,
               child: Container(
                 width: 144,
@@ -62,6 +65,7 @@ class MenuWidget extends StatelessWidget {
                     ),
                   ],
                 ),
+              )
               ),
             ),
             Align(
