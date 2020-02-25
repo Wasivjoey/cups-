@@ -8,6 +8,7 @@
 
 import 'package:flutter/material.dart';
 import './../values/values.dart';
+import 'package:cups/utils/cups_Nav/Nav_pg.dart';
 
 
 class MenuWidget extends StatelessWidget {
@@ -39,8 +40,9 @@ class MenuWidget extends StatelessWidget {
                 ),
               ),
             
+            ),
             Align(
-               child: FlatButton(onPressed: ()=>MyNavigator.goToHome(context),
+  
               alignment: Alignment.topCenter,
               child: Container(
                 width: 144,
@@ -50,6 +52,7 @@ class MenuWidget extends StatelessWidget {
                   color: AppColors.primaryElement,
                   borderRadius: Radii.k5pxRadius,
                 ),
+                child: FlatButton(onPressed: ()=>MyNavigator.goToSnacks(context),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -65,9 +68,11 @@ class MenuWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
               ),
-            ),
+              ),
+              ),
+            
+      
             Align(
               alignment: Alignment.topCenter,
               child: Container(
@@ -146,6 +151,7 @@ class MenuWidget extends StatelessWidget {
                 color: AppColors.primaryElement,
                 borderRadius: Radii.k5pxRadius,
               ),
+              child: FlatButton(onPressed: ()=>MyNavigator.goToHome(context),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -161,6 +167,7 @@ class MenuWidget extends StatelessWidget {
                   ),
                 ],
               ),
+            )
             ),
           ],
         ),
