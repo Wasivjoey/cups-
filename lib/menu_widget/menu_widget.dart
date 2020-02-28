@@ -52,7 +52,7 @@ class MenuWidget extends StatelessWidget {
                   color: AppColors.primaryElement,
                   borderRadius: Radii.k5pxRadius,
                 ),
-                child: FlatButton(onPressed: ()=>MyNavigator.goToSnacks(context),
+                child: FlatButton(onPressed: ()=>MyNavigator.goToHome(context),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -68,14 +68,16 @@ class MenuWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
+              ),  
               ),
               ),
             
       
             Align(
+              
               alignment: Alignment.topCenter,
               child: Container(
+                
                 width: 144,
                 height: 48,
                 margin: EdgeInsets.only(top: 96),
@@ -83,11 +85,14 @@ class MenuWidget extends StatelessWidget {
                   color: AppColors.primaryElement,
                   borderRadius: Radii.k5pxRadius,
                 ),
+                child: FlatButton(onPressed: ()=>MyNavigator.goToHome(context),
                 child: Column(
+                  
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Container(
+
                       margin: EdgeInsets.only(right: 17),
                       child: Text(
                         "Beverage",
@@ -103,6 +108,7 @@ class MenuWidget extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
             ),
             Container(
               width: 144,
@@ -128,6 +134,7 @@ class MenuWidget extends StatelessWidget {
                     left: 9,
                     top: 13,
                     right: 8,
+                    child: FlatButton(onPressed: ()=>MyNavigator.goToHome(context),
                     child: Text(
                       "Daily Suprise\n",
                       textAlign: TextAlign.left,
@@ -138,6 +145,7 @@ class MenuWidget extends StatelessWidget {
                         fontSize: 20,
                       ),
                     ),
+                  ),
                   ),
                 ],
               ),
@@ -167,8 +175,9 @@ class MenuWidget extends StatelessWidget {
                   ),
                 ],
               ),
-            )
-            ),
+              )
+              ),
+            
           ],
         ),
       ),

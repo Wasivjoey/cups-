@@ -28,9 +28,10 @@ initDb() async{
 
 
 _onCreate(Database db,int version) async{
-  await db
-          .execute("CREATE TABLE $TABLE($ID INTEGER PRIMARY KEY, $NAME TEXT");
+  await db.execute(
+    "CREATE TABLE $TABLE($ID INTEGER PRIMARY KEY, $NAME TEXT)");
 }
+
 
 Future<item> save (item item) async{
   var dbClient = await db;
