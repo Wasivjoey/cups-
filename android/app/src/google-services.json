@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "778361770904",
+    "firebase_url": "https://cups-5cb76.firebaseio.com",
+    "project_id": "cups-5cb76",
+    "storage_bucket": "cups-5cb76.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778361770904:android:1cc8b41dbd3e87a7eb91ed",
+        "android_client_info": {
+          "package_name": "com.example.cups"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778361770904-jpc7d25088mjkbp3k821tn202rh94mj5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL2ybEDyjqDggQbq59gTDkrmqT979ZJGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778361770904-jpc7d25088mjkbp3k821tn202rh94mj5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
