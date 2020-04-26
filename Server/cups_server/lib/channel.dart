@@ -16,7 +16,7 @@ class CupsServerChannel extends ApplicationChannel {
 
 
       final dataModel = ManagedDataModel.fromCurrentMirrorSystem();
-      final persistentStore = PostgreSQLPersistentStore.fromConnectionInfo(
+      final persistentStore  = PostgreSQLPersistentStore.fromConnectionInfo(
         'manager',
          '12345678', 
          'localhost', 
@@ -24,6 +24,7 @@ class CupsServerChannel extends ApplicationChannel {
          'cupsdb' 
          );
          context = ManagedContext (dataModel, persistentStore);
+
          
   }
 
@@ -36,10 +37,10 @@ class CupsServerChannel extends ApplicationChannel {
   @override
   Controller get entryPoint  => Router()
      
-      ..route("/item/[:id]").link(() => ItemsController(context ))
+      //..route("/item/[:id]").link(() => ItemsController(context ))
 
       ..route('/signup') .link(() => SignupController(context));
-
+ 
       }
       
 
