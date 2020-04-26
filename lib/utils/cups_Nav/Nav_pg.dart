@@ -22,4 +22,5 @@ class MyNavigator{
     Navigator.pushNamed(context, "/signup");
    
   }
+  
 }

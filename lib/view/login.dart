@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cups/utils/cups_Nav/Nav_pg.dart';
 
 class LoginScreen extends StatelessWidget {
   static const routeName = '/login';
@@ -84,7 +85,7 @@ class LoginScreen extends StatelessWidget {
               ),
               padding: const EdgeInsets.all(15),
               textColor: Colors.white,
-              onPressed: () {},
+              onPressed: ()=> MyNavigator.goToDB(context),
             ),
           ],
         ),
