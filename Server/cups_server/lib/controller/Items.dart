@@ -1,6 +1,7 @@
 import 'package:cups_server/cups_server.dart';
+import 'package:my_project/model/my_model.dart';
 //import 'package:aqueduct/src/db/schema/migration_source.dart';
-import '../model/items.dart';
+import '../model/items.dart'; 
 
 class ItemsController extends ResourceController {
   ItemsController(this.context);

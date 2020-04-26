@@ -1,10 +1,11 @@
 
-import 'utils/Sqlite/db_page.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:cups/menu_widget/menu_widget.dart';
-import 'utils/cups_Nav/Nav_pg.dart';
+import 'package:cups/utils/cups_Nav/Nav_pg.dart';
+
 
 
 
@@ -95,7 +96,7 @@ class Home extends StatefulWidget{
                 Container(
                  alignment: Alignment.center,
                  child: RaisedButton(
-                   onPressed: ()=> MyNavigator.goToDB(context) ,
+                   onPressed: ()=> MyNavigator.goToLogin(context) ,
                    child: Text(
                      'Admin',
                      style: TextStyle(

@@ -21,7 +21,7 @@ class CupsServerChannel extends ApplicationChannel {
          '12345678', 
          'localhost', 
          5432, 
-         'cupsdb'
+         'cupsdb' 
          );
          context = ManagedContext (dataModel, persistentStore);
          
@@ -38,17 +38,10 @@ class CupsServerChannel extends ApplicationChannel {
      
       ..route("/item/[:id]").link(() => ItemsController(context ))
 
-      ..route('/signup') .link(() => SignupController(context))
-         
-      ..route('/client').linkFunction((request) async {
-      final   client = File('client.html').readAsStringSync();
-       
-      
-        return Response.ok(client)..contentType = ContentType.html;
+      ..route('/signup') .link(() => SignupController(context));
 
-      });
+      }
       
 
     
-  
-}
+   

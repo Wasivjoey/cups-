@@ -14,4 +14,12 @@ class MyNavigator{
     Navigator.pushNamed(context, "/manager");
    
   }
+  static void goToLogin(BuildContext context) {
+    Navigator.pushNamed(context, "/login");
+   
+  }
+  static void goToSignup(BuildContext context) {
+    Navigator.pushNamed(context, "/signup");
+   
+  }
 }
